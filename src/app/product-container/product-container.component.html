@@ -1,0 +1,19 @@
+<app-product-search (inputSearchChanged)="inputSearchChangedContainer($event)"></app-product-search>
+<app-filter 
+[all]="getAllCount"
+[qualified]="getAllQualified"
+[notQualified]="getAllNotQualified"
+(selectedFilterChanged)="selectedFilterChangedContainer($event)"
+
+></app-filter>
+<!--  *ngIf="selectedFilter =='all' ||item.qualife.toString()==selectedFilter ",-->
+<div *ngFor="let item of products" (click)="selectedProdcut=item">
+    <app-product-table 
+    [productTable]="item"
+     [searchResult]="inputSearch" 
+      *ngIf="(inputSearch == '' || item.name.toLowerCase() == inputSearch) && 
+      (selectedFilter =='all' ||item.qualife.toString()==selectedFilter )"
+     ></app-product-table>
+</div>
+
+

@@ -1,0 +1,9 @@
+<div class="input-group mb-3">
+  <!-- [(ngModel)]="inputSearch" (input)="inputSearchChangeMethod()"-->
+   <!--[ngClass]="{btn:true ,'btn-search':inputSearch,'btn-search-disabled':!inputSearch}"-->
+    <input type="text" class="search-input" #inputSearch>
+
+    <button class="input-group-text" id="basic-addon2" 
+     (click)="searchButton(inputSearch)"
+     >Search</button>
+  </div>

@@ -1,0 +1,8 @@
+.filter-container{
+    margin: auto;
+    margin-top: 17px;
+}
+input[type=radio]{
+    margin-left: 10px;
+    margin-right:5px
+}
