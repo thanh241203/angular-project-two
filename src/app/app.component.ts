@@ -1,13 +1,22 @@
-import { Component } from '@angular/core';
+import { Component,OnInit} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+
+import { ProductContainerComponent } from "./product-container/product-container.component";
+import { ProductDetailComponent } from "./product-container/product-detail/product-detail.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, ProductContainerComponent, ProductDetailComponent,CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
-  title = 'angular-project-phantwo';
+export class AppComponent implements OnInit {
+  ngOnInit(): void {
+
+  }
+ 
+
+
 }
