@@ -1,4 +1,4 @@
-import { Component, ElementRef, EventEmitter, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -18,9 +18,10 @@ inputSearchChangeMethod(){
 this.inputSearchChanged.emit(this.inputSearch)
 }
 
-searchButton(input:HTMLInputElement){
-this.inputSearch=input.value;
-this.inputSearchChanged.emit(this.inputSearch)
+@ViewChild('inputSearch',{static:true})searchInPutElement:ElementRef
 
+searchButton(){
+this.inputSearch=this.searchInPutElement.nativeElement.value;
+this.inputSearchChanged.emit(this.inputSearch)
 }
 }

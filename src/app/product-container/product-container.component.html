@@ -7,13 +7,14 @@
 
 ></app-filter>
 <!--  *ngIf="selectedFilter =='all' ||item.qualife.toString()==selectedFilter ",-->
-<div *ngFor="let item of products" (click)="selectedProdcut=item">
+<ng-container *ngFor="let item of products">
     <app-product-table 
     [productTable]="item"
      [searchResult]="inputSearch" 
       *ngIf="(inputSearch == '' || item.name.toLowerCase() == inputSearch) && 
       (selectedFilter =='all' ||item.qualife.toString()==selectedFilter )"
+       (click)="selectedProdcut=item"
      ></app-product-table>
-</div>
+</ng-container>
 
 
