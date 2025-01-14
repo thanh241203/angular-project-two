@@ -1,0 +1,20 @@
+<p>parent works!</p>
+<!--ContentChild()-->
+<div>
+    <app-child>
+        <h3>Some thing</h3>
+        <p #para>
+            this is app child
+        </p>
+        <p #para>
+            this is app child 2
+        </p>
+        <p #para>
+            this is app child 3 
+        </p>
+        <app-testta [name]="'jane'"></app-testta>
+        <app-testta [name]="'john'"></app-testta>
+        <app-testta [name]="'sss'"></app-testta>
+    </app-child>
+    <button (click)="showParaValue()">sss</button>
+</div>
