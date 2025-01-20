@@ -1,5 +1,5 @@
 <app-product-container #productContainerComponent></app-product-container>
-<app-product-detail *ngIf="productContainerComponent.selectedProdcut"></app-product-detail>
+<app-product-detail *ngIf="productContainerComponent.selectedProdcut" [produdctListComp]="productContainerComponent"></app-product-detail>
 
 <div class="ekart-featured-products">
     <div class="ekart-featured-products-heading">
