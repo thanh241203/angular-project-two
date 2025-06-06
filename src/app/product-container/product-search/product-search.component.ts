@@ -14,9 +14,7 @@ inputSearch='';
 
 @Output()
 inputSearchChanged:EventEmitter<string>=new EventEmitter<string>()
-inputSearchChangeMethod(){
-this.inputSearchChanged.emit(this.inputSearch)
-}
+ 
 
 @ViewChild('inputSearch',{static:true})searchInPutElement:ElementRef
 
